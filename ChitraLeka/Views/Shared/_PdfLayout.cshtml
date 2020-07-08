@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+    var imagePath = Server.MapPath("~/Images");
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CDC-PDF</title>
+</head>
+<body style="padding:0px;">
+    <table>
+        <tr>
+            <td style="width:80%;text-align:center;">
+                <img src="@imagePath/cdclogo.png" width="150" />
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+
+   
+   
+
+    @RenderBody()
+
+ 
+    <table>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:80%;text-align:left;">
+                <img src="@imagePath/cdclogo.png" width="80" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td  style="font-size:10px;text-align:center;">
+                CHITRALEKA DANCE COMPANY© COPYRIGHT 2015. ALL RIGHTS RESERVED.
+            </td>
+        </tr>
+    </table> 
+
+</body>
+</html>

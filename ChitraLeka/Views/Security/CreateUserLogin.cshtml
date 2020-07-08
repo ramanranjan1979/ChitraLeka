@@ -1,0 +1,73 @@
+﻿
+@model ChitraLeka.ViewModel.Security.NewPeronLogin
+
+@{
+    ViewBag.Title = "New Login";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("SaveUserLogin", "Security", FormMethod.Post, new { ID = "frmCreateLogin" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-box-large">
+
+                <div class="panel-heading">
+                    <div class="panel-title">New Login</div>
+
+                    <div class="panel-options">
+                        <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+                        <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="form-horizontal">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 control-label">Select Student</label>
+                            <div class="col-sm-10">
+                                @Html.DropDownListFor(e => Model.PersonId, Model.people, "-- select student --", new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 control-label">Select Role</label>
+                            <div class="col-sm-10">
+                                @Html.DropDownListFor(e => Model.roleId, Model.roles, "-- select role --", new { @class = "form-control" })
+                            </div>
+                        </div>
+                                                                     
+
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button class="btn-primary">Save</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                @Html.ActionLink("Back to List", "Index")
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

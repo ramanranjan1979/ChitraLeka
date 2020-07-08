@@ -1,0 +1,55 @@
+﻿
+@model IEnumerable<ChitraLeka.ViewModel.Ledger.InvoiceType>
+
+@{
+    ViewBag.Title = "Invoice Types";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-box-large">
+    <div class="panel-heading">
+        <div class="panel-title">CDC Invoices</div>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+
+                    <th>
+                        @Html.DisplayName("#")
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Code)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Code)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelitem => item.Description)
+                        </td>
+
+
+
+                    </tr>
+                }
+            </table>
+
+        </div>
+        </div>
+    </div>
+
+

@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Chitraleka Dance Company</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Images/Fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Images/Fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Images/Fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Images/Fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Images/Fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Images/Fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Images/Fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Images/Fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Images/Fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Images/Fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Images/Fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Images/Fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Images/Fav/favicon-16x16.png">
+    <link rel="manifest" href="~/Images/Fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/Images/Fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="~/Content/styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/Content/cssjqryUi")
+
+    
+
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <h1><a href="#">Chitraleka Dance Company</a></h1>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="input-group form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button">Search</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="navbar navbar-inverse" role="banner">
+                        <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+                                    <ul class="dropdown-menu animated fadeInUp">
+                                        <li><a href="/Account/MyAccount">Profile</a></li>
+                                        <li><a href="/Home/LogOut">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sidebar content-box" style="display: block;">
+                    <ul class="nav">
+                        <!-- Main menu -->
+                        <li class="current"><a href="/Admin/Index"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
+                        @*<li><a href="calendar.html"><i class="glyphicon glyphicon-calendar"></i> Calendar</a></li>
+                        <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Statistics (Charts)</a></li>*@
+
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-user"></i> My People
+                                <span class="caret pull-right"></span>
+                            </a>
+                            <!-- Sub menu -->
+                            <ul>
+                                <li><a href="/People/Create">Add New</a></li>
+                                <li><a href="/People/Index">List</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="/Registration/Index"><i class="glyphicon glyphicon-pencil"></i> Registration</a></li>                       
+                        
+
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-list"></i> Student
+                                <span class="caret pull-right"></span>
+                            </a>
+                            <!-- Sub menu -->
+                            <ul>
+                                <li><a href="/Student/Index">List</a></li>
+                                <li><a href="/Student/Promotion">Promotion</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-list"></i> Invoice
+                                <span class="caret pull-right"></span>
+                            </a>
+                            <!-- Sub menu -->
+                            <ul>
+                                <li><a href="/Ledger/CreateInvoice">New</a></li>
+                                <li><a href="/Ledger/DueInvoice">List</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-calendar"></i> Calendar
+                                <span class="caret pull-right"></span>
+                            </a>
+                            <!-- Sub menu -->
+                            <ul>
+                                <li><a href="/Lookup/CreateEvent">New Event</a></li>
+                                <li><a href="/Lookup/Eventlist">Event List</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-list"></i> Lookup
+                                <span class="caret pull-right"></span>
+                            </a>
+                            <!-- Sub menu -->
+                            <ul>
+                                <li><a href="/Lookup/OurCenter">Centers</a></li>
+                                <li><a href="/Lookup/Grades">Grades</a></li>
+                                <li><a href="/Lookup/InvoiceTypes">Invoice Types</a></li>                              
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-envelope"></i> Mailout
+                                <span class="caret pull-right"></span>
+                            </a>
+                            <!-- Sub menu -->
+                            <ul>
+                                <li><a href="/Admin/MailoutTypes">Types</a></li>
+                                <li><a href="/Admin/ComposeEmail">Compose</a></li>                                
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-wrench"></i> Security
+                                <span class="caret pull-right"></span>
+                            </a>
+                            <!-- Sub menu -->
+                            <ul>
+                                <li><a href="/Security/Index">User Management</a></li>
+                                <li><a href="/Security/SystemHealth">System Health</a></li>
+                            </ul>
+                        </li>
+
+                       
+
+
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-10">
+                @RenderBody()
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <footer>
+        <div class="container">
+
+            <div class="copy text-center">
+                CHITRALEKA DANCE COMPANY© COPYRIGHT 2015. ALL RIGHTS RESERVED.
+            </div>
+
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

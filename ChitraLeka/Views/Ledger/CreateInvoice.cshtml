@@ -1,0 +1,157 @@
+﻿
+@model ChitraLeka.ViewModel.Ledger.InvoiceCreation
+
+@{
+    ViewBag.Title = "New Invoice";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("SaveInvoice", "Ledger", FormMethod.Post, new { ID = "frmCreatePerson" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(x => x.IsDue)
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-box-large">
+
+                <div class="panel-heading">
+                    <div class="panel-title">New Invoice</div>
+
+                    <div class="panel-options">
+                        <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+                        <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="form-horizontal">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.StudentList, htmlAttributes: new { @class = "control-label col-md-2 col-sm-2" })*@
+                            <label class="col-sm-2 col-md-2 control-label">Select Student</label>
+                            <div class="col-sm-10">
+                                @Html.DropDownListFor(e => Model.StudentId, Model.StudentList, "-- select student --", new { @class = "form-control" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.InvoiceTypes, htmlAttributes: new { @class = "control-label col-md-2 col-sm-2" })*@
+                            <label class="col-sm-2 col-md-2 control-label">Select Type</label>
+                            <div class="col-sm-10">
+                                @Html.DropDownListFor(e => Model.InvoiceTypeId, Model.InvoiceTypes, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.InvoiceAmount, htmlAttributes: new { @class = "control-label col-md-2 col-sm-2" })*@
+                            <label class="col-sm-2 col-md-2 control-label">Enter Amount</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.InvoiceAmount, new { htmlAttributes = new { @class = "form-control", @style = "text-align:right;" } })
+                                @Html.ValidationMessageFor(model => model.InvoiceAmount, "", new { @class = "text-danger", maxlength = 5 })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.DueDate, htmlAttributes: new { @class = "control-label col-md-2 col-sm-2" })*@
+                            <label class="col-sm-2 col-md-2 control-label">Due Date</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.DueDate, new { htmlAttributes = new {@Readonly="Readonly", @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.DueDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.Student.Grade, htmlAttributes: new { @class = "control-label col-md-2 col-sm-2" })*@
+                            <label class="col-sm-2 col-md-2 control-label">Grade</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.Student.Grade, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.Student.Grade, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.Student.Grade, htmlAttributes: new { @class = "control-label col-md-2 col-sm-2" })*@
+                            <label class="col-sm-2 col-md-2 control-label">Term</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.Student.Term, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.Student.Term, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @*@Html.LabelFor(model => model.Note, htmlAttributes: new { @class = "control-label col-md-2 col-sm-2" })*@
+                            <label class="col-sm-2 col-md-2 control-label">Note</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control", maxlength = 250, Placeholder = "Any comments..." } })
+                                @Html.ValidationMessageFor(model => model.Note, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                       
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button class="btn-primary">Save</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                @Html.ActionLink("Back to List", "DueInvoice")
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+
+    $(function () {
+        $('#StudentId').change(function () {
+            var data = { "studentId": $("#StudentId :selected").val() };
+            $.ajax({
+                url: "/Ledger/GetStudentDetailByStudentId",
+                type: "POST",
+                data: JSON.stringify(data),
+                dataType: "json",
+                contentType: "application/json",
+                success: function (data) {
+                    
+                    $("#Student_Grade").val(data.g);
+                    $("#Student_Term").val(data.t);
+                },
+                error: function () {
+                    // alert("Error");
+                }
+            });
+
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('input[type=datetime]').datepicker({
+            dateFormat: "dd/M/yy",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-1:+1"
+        });
+
+    });
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

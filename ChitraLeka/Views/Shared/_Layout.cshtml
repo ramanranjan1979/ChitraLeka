@@ -1,0 +1,97 @@
+﻿@using ChitraLeka.Helpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Chitraleka Dance Company</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Images/Fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/Images/Fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Images/Fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/Images/Fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Images/Fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/Images/Fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Images/Fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/Images/Fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/Images/Fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/Images/Fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/Images/Fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/Images/Fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Images/Fav/favicon-16x16.png">
+    <link rel="manifest" href="~/Images/Fav/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/Images/Fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="~/Content/styles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+ 
+
+    <div class="container">      
+        
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Logo -->
+                        <div class="logo">                            
+                            <h1 style="float:left;"><a href="/">Chitraleka Dance Company</a></h1>
+                            <img class="img-circle img-responsive" style="max-width: 54px;float: right;" src="~/Images/beta.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        @RenderBody()
+</div>
+
+   
+
+    
+
+    <script>
+
+        function OpenSupport() {
+            $('#model_support').modal();
+            $('#SupportThankYou').hide();
+            $('#SupportThankYou1').hide();
+            $('#SupportThankYou2').hide();
+            $('#support_body').show();
+        }
+
+
+        function ThankYouSupport(data) {
+
+
+            if (data.Ok == "OK") {
+
+                $('#SupportThankYou').show();
+            }
+            else if (data.Ok == "NF") {
+                $('#SupportThankYou1').show();
+            }
+            else {
+                $('#SupportThankYou2').show();
+            }
+
+            $('#Message').val('');
+
+            $('#support_body').hide();
+        }
+
+
+
+    </script>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

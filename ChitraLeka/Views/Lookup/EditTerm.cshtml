@@ -1,0 +1,189 @@
+﻿@model ChitraLeka.ViewModel.Shared.TermCreation
+
+@{
+    ViewBag.Title = "CreateTerm";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateTerm", "Lookup", FormMethod.Post, new { ID = "frmEditTerm", @class = "form-horizontal", @autocomplete = "off" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-box-large">
+
+                <div class="panel-heading">
+                    <div class="panel-title">Update Term</div>
+
+                    <div class="panel-options">
+                        <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+                        <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                    <div class="form-horizontal">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(x => x.Id)
+                        @Html.HiddenFor(x => x.GradeId)
+
+                        <div class="form-group">
+                            <label for="GradeId" class="col-sm-2 col-md-2 control-label">Select Grade</label>
+                            <div class="col-sm-10">
+                                @Html.DropDownListFor(e => Model.GradeId, Model.Grades, new { @class = "form-control",@readonly = "readonly", @disabled = "disabled" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="Name" class="col-sm-2 col-md-2 control-label">Term Name</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control"} })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="StartDate" class="col-sm-2 col-md-2 control-label">Start Date</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.StartDate, "{0:d MMM yyyy}", new { htmlAttributes = new { @Readonly = "Readonly", @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="EndDate" class="col-sm-2 col-md-2 control-label">End Date</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.EndDate, "{0:d MMM yyyy}", new { htmlAttributes = new { @Readonly = "Readonly", @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 control-label">Weeks Count</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.WeeksCount, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.WeeksCount, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 control-label">Days Count</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.DaysCount, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                @Html.ValidationMessageFor(model => model.DaysCount, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="UnitPrice" class="col-sm-2 col-md-2 control-label">Unit Price</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.UnitPrice, new { htmlAttributes = new { @class = "form-control", @style = "text-align:right;" } })
+                                @Html.ValidationMessageFor(model => model.UnitPrice, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Fee" class="col-sm-2 col-md-2 control-label">Term Fee</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.Fee, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @style = "text-align:right;" } })
+                                @Html.ValidationMessageFor(model => model.Fee, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Remarks" class="col-sm-2 col-md-2 control-label">Remarks</label>
+                            <div class="col-sm-10">
+                                @Html.TextAreaFor(model => model.Remarks, new { placeholder = "Any comments...", @class = "form-control", maxlength = 250, style = "width: 300px; height: 200px;" })
+                                @Html.ValidationMessageFor(model => model.Remarks, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button class="btn-primary">Save</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                @Html.ActionLink("Back to List", "Termlist")
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+
+    $("#WeeksCount").click(function () {
+        calculateDifference();
+        CalculateTermFee();
+    });
+
+    $("#DaysCount").click(function () {
+        calculateDifference();
+        CalculateTermFee();
+    });
+
+
+
+    $("#UnitPrice").blur(function () {
+        CalculateTermFee();
+        CalculateTermFee();
+    });
+
+
+
+    function calculateDifference() {
+
+        var numberofweek = mydiff($('#StartDate').val(), $('#EndDate').val(), 'weeks');
+        $('#WeeksCount').val(numberofweek);
+        var numberofdays = mydiff($('#StartDate').val(), $('#EndDate').val(), 'days');
+        $('#DaysCount').val(numberofdays);
+    }
+
+    function CalculateTermFee() {
+
+        var weekcount = $("#WeeksCount").val();
+        var unitprice = $("#UnitPrice").val();
+        $("#Fee").val(isNaN(weekcount * unitprice) ? 0 : weekcount * unitprice);
+
+    }
+
+
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('input[type=datetime]').datepicker({
+            onClose: function () {
+
+                calculateDifference();
+                CalculateTermFee();
+            },
+            dateFormat: "dd/M/yy",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-1:+1"
+        });
+    });
+
+ 
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+

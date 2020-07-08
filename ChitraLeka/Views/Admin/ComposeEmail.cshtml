@@ -1,0 +1,236 @@
+﻿
+@model ChitraLeka.ViewModel.Shared.MailoutCompose
+
+@{
+    ViewBag.Title = "Compose a new email";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("SendNotification", "Admin", FormMethod.Post, new { ID = "frmCreateEmail", @autocomplete = "off" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(e => e.PersonListId)
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-box-large">
+                <div class="panel-heading">
+                    <div class="panel-title">Compose</div>
+
+                    <div class="panel-options">
+                        <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+                        <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 control-label">Category</label>
+                            <div class="col-sm-10">
+                                @Html.DropDownListFor(e => Model.PersonTypeId, Model.PersonTypeList, "--Please select audience--", new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 control-label">Sub Category</label>
+                            <div class="col-sm-10">
+                                @Html.DropDownListFor(e => e.Grade, new SelectList(string.Empty, "Value", "Text"), "--Please select a Grade--", new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 control-label">To:</label>
+                            <div class="col-sm-10">
+                                @Html.DropDownListFor(e => e.Target, new SelectList(string.Empty, "Value", "Text"), "--Email to--", new { multiple = "multiple", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 control-label">From:</label>
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(e => Model.From, new { Readonly = "readonlyd", @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 control-label">Subject:</label>
+                            <div class="col-sm-10">
+                                @Html.TextBoxFor(e => Model.Subject, new { Maxlength = 50, @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-2 control-label">Message:</label>
+                            <div class="col-sm-10">
+                                @Html.TextAreaFor(e => Model.Body, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button class="btn-primary" onclick="PreviewMessage_Popup(); return false;">Preview</button>
+                                <button class="btn-primary">Push Notification</button>
+                            </div>
+
+                        </div>                       
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="messagePreview" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <p id="myMessage">Message HERE....</p>
+                            <p style="text-align:center;">
+                                <input type="text" maxlength="50" id="toTestEmail" placeholder="Enter test email address..." required="required" />
+                                <input type="Button" value="SEND TEST" id="btnSendTestEMail" class="btn-primary" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-12">
+        @Html.Action("GetMailoutList", "Admin")
+    </div>
+</div>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $("#PersonTypeId").change(function () {
+            $("#Grade").empty();
+            $("#Target").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetGrades")',
+                dataType: 'json',
+                data: { id: $("#PersonTypeId").val() },
+
+                success: function (grades) {
+
+                    $.each(grades, function (i, grade) {
+                        $("#Grade").append('<option value="' + grade.Value + '">' +
+                             grade.Text + '</option>');
+                    });
+
+                    if ($("#PersonTypeId").val() != 1) {
+                        PopulateTargets($("#PersonTypeId").val());
+                    }
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve grades.' + ex);
+                }
+            });
+            return false;
+        })
+
+        function PopulateTargets(personTypeId) {
+            $("#Target").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetPersonByPersonTypeId")',
+                dataType: 'json',
+                data: { pTypeId: personTypeId },
+                success: function (targets) {
+
+                    $.each(targets, function (i, target) {
+                        $("#Target").append('<option value="' + target.Value + '">' +
+                             target.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve targets.' + ex);
+                }
+            });
+            return false;
+        }
+
+
+        $("#Grade").change(function () {
+            $("#Target").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetStudentByGrades")',
+                dataType: 'json',
+                data: { id1: $("#PersonTypeId").val(), id2: $("#Grade").val() },
+
+                success: function (targets) {
+
+                    $.each(targets, function (i, target) {
+                        $("#Target").append('<option value="' + target.Value + '">' +
+                             target.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve targets.' + ex);
+                }
+            });
+            return false;
+        })
+    });
+
+    $('#Target').change(function () {
+        $('#PersonListId').val($(this).val());
+    })
+
+
+    function PreviewMessage_Popup() {
+        var msg = $('#Body').val();
+        var url = window.location.protocol + "//" + window.location.host + "/Admin/GetNotificationPreview";
+        $.ajax({
+            url: url,
+            type: "post",
+            data: { 'content': msg },
+            success: function (data) {
+                $('#myMessage').html(data);
+            },
+            error: function () { }
+        });
+
+        $('#messagePreview').modal('show');
+    }
+
+    $('#btnSendTestEMail').click(function () {
+        var msg = $('#Body').val();
+        var url = window.location.protocol + "//" + window.location.host + "/Admin/SendTestNotification";
+        $.ajax({
+            url: url,
+            type: "post",
+            data:
+                {
+                    'content': msg,
+                    'toEmail': $('#toTestEmail').val(),
+                    'subject': $('#Subject').val()
+                },
+            success: function (data) {
+                $('#messagePreview').modal('hide');
+            },
+            error: function () {
+                $('#messagePreview').modal('hide');
+            }
+        });
+
+
+    });
+
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

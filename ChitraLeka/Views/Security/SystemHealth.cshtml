@@ -1,0 +1,70 @@
+﻿@model List<ChitraLeka.ViewModel.Security.SystemLog>
+@{
+    ViewBag.Title = "SystemHealth";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-box-large">
+    <div class="panel-heading">
+        <div class="panel-title">CDC system log</div>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Id)
+                    </th>
+
+                    <th>
+                        @Html.Label("Log Type", "Log Type")
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Description)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].CreatedOn)
+                    </th>
+
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Person.Id)
+                    </th>
+
+
+
+                </tr>
+
+                @foreach (var item in Model.OrderByDescending(x => x.CreatedOn))
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Type.Name)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedOn)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Person.Id)
+                        </td>
+
+                    </tr>
+                }
+            </table>
+
+        </div>
+    </div>
+</div>

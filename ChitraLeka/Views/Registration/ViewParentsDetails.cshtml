@@ -1,0 +1,97 @@
+﻿@model ChitraLeka.ViewModel.Registration.Registration
+@{
+    ViewBag.Title = "Parents Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="content-box-large">
+
+            <div class="panel-heading">
+                <div class="panel-title">Parent's Details</div>
+
+                <div class="panel-options">
+                    <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+                    <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2  col-md-2 control-label">Student First Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(model => model.Candidate.FirstName, new { @readonly = "redaonly", htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2  col-md-2 control-label">Student Last Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.Candidate.LastName, htmlAttributes: new { @readonly = "readonly" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-sm-2  col-md-2 control-label">Father First Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(model => model.CandidateFather.FirstName, new { @readonly = "redaonly", htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2  col-md-2 control-label">Father Last Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.CandidateFather.LastName, htmlAttributes: new { @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2  col-md-2 control-label">Father DOB</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.CandidateFather.DOB, htmlAttributes: new { @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2  col-md-2 control-label">Mother First Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(model => model.CandidateMother.FirstName, new { @readonly = "redaonly", htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label class="col-sm-2  col-md-2 control-label">Mother Last Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.CandidateMother.LastName, htmlAttributes: new { @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2  col-md-2 control-label">Mother DOB</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.CandidateMother.DOB, htmlAttributes: new { @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <span>@Html.ActionLink("Back to List", "Index")</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+               
+            </div>
+        </div>
+    </div>
+</div>

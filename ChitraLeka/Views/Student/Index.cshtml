@@ -1,0 +1,82 @@
+﻿
+@model ChitraLeka.ViewModel.Registration.RegistrationList
+@using ChitraLeka.Helpers
+
+@{
+    ViewBag.Title = "My Students";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="content-box-large">
+    <div class="panel-heading">
+        <div class="panel-title">Student Registration</div>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Registrations[0].RegistrationId)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Registrations[0].Candidate.FirstName)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Registrations[0].Candidate.LastName)
+                    </th>
+
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Registrations[0].Candidate.DOB)
+                    </th>
+
+                    <th>
+                        @Html.Label("Admission Status","Admission Status")
+                    </th>
+                </tr>
+
+                @foreach (var item in Model.Registrations.Where(x => x.RegistrationId > 0))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RegistrationId)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Candidate.FirstName)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Candidate.LastName)
+                        </td>
+
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Candidate.DOB)
+                        </td>
+
+                        <td>
+                            <div>
+                                @{
+                                    if (item.StudentId > 0)
+                                    {
+                                        @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-thumbs-up'></span>", "View Admission", "ViewAdmission", "Student", routeValues: new { StudentId = item.StudentId }, htmlAttributes: new { data_modal = "", @class = "btn btn-info" })
+                                    }
+                                    else
+                                    {
+                                        @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-thumbs-down'></span>", "Complete Admission", "InitiateAdmission", "Student", routeValues: new { RegistrationId = item.RegistrationId }, htmlAttributes: new { data_modal = "", @class = "btn btn-danger" })
+                                    }
+                                }
+                            </div>
+                        </td>
+
+                    </tr>
+                   }
+            </table>
+        </div>
+    </div>
+</div>

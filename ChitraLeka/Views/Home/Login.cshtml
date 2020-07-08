@@ -1,0 +1,106 @@
+﻿@model ChitraLeka.ViewModel.Account.Login
+@{
+    ViewBag.Title = "Log in";
+
+}
+
+
+<div class="login-bg">
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { @class = "form-horizontal", role = "form", ID = "Login" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="page-content container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="login-wrapper">
+                        <div>
+                            <img class="img-responsive" src="~/Images/cdclogo.png" style="display:inline-table;" />
+                        </div>
+                        <div class="box">
+                            <div class="content-wrap">
+                                <h6>Sign In</h6>
+                                @Html.TextBoxFor(m => m.UserName, new { @placeholder = "Enter Your User Name", maxlength = "15", @class = "form-control", @required = "required", @data_val = "true;" })
+                                @Html.PasswordFor(m => m.Password, new { @placeholder = "Password", maxlength = "20", @type = "password", @class = "form-control", @required = "required", @data_val = "true;" })
+
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top:20px;">
+                                    <input type="submit" class="btn btn-primary" id="login" value="Login" />
+                                    <p style="margin-top:30px;">
+                                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                                    </p>
+                                    <p>
+                                        <a href="#Support" onclick="OpenSupport();">
+                                            <img src="~/Images/support-icon.png" alt="support" style="max-width: 50px;" />
+                                        </a>
+                                    </p>
+                                    <p>
+                                        @Html.ActionLink("Beta disclaimer", "Disclaimer","Home")
+                                    </p>
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="text-align:center;">
+                                    <p style="font-size: 15px; color: green; font-weight: bold; font-style: normal;" id="message">
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+        @Html.ValidationSummary()
+
+        @Html.Action("GetLoginSupport", "Shared")
+    }
+</div>
+
+
+<script>
+
+
+
+    $(document).ready(function () {
+
+        $("#login").click(function () {
+            $("#message").html("Logging in...");
+            var data = { "UserName": $("#UserName").val(), "Password": $("#Password").val() };
+            $.ajax({
+                url: "/Home/Validateuser",
+                type: "POST",
+                data: JSON.stringify(data),
+                dataType: "json",
+                contentType: "application/json",
+                success: function (status) {
+
+                    if (status.Message != 'Login attempt successful!') {
+                        $("#message").css("color", "red");
+                    }
+                    else {
+                        $('#message').css('color', 'green');
+                    }
+                    $("#message").html(status.Message);
+                    if (status.Success) {
+                        window.location.href = status.TargetURL;
+                    }
+                },
+                error: function () {
+                    $("#message").html("Error while authenticating user credentials!");
+                }
+            });
+            return false;
+        });
+    });
+
+</script>
+

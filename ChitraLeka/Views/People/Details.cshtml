@@ -1,0 +1,117 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@model ChitraLeka.ViewModel.Contact.Person
+
+@{
+    ViewBag.Title = "Personal Information";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="content-box-large">
+            <div class="panel-heading">
+                <div class="panel-title">Person Information</div>
+
+                <div class="panel-options">
+                    <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+                    <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="form-horizontal">
+
+                    <div class="form-group">
+                        <label for="FirstName" class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.FirstName, new { @class = "form-control", @Readonly = "Readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="MiddleName" class="col-sm-2 control-label">Middle Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.MiddleName, new { @class = "form-control", @Readonly = "Readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="LastName" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.LastName, new { @class = "form-control", @Readonly = "Readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Gender" class="col-sm-2 control-label">Sex</label>
+                        <div class="col-sm-10">
+                            @{
+                                if (Model.GenderTypeId == "1")
+                                {
+                                    @Html.TextBox("Gender","Female", new { @class = "form-control", @Readonly = "Readonly" })
+                                }
+                                else { @Html.TextBox("Gender", "Male", new { @class = "form-control", @Readonly = "Readonly" })}
+                            }
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="DOB" class="col-sm-2 control-label">DOB</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.DOB, new { @class = "form-control", @Readonly = "Readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="DateCreated" class="col-sm-2 control-label">Created On</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.DateCreated, new { @class = "form-control", @Readonly = "Readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="PrimaryEmail" class="col-sm-2 control-label">Primary Email</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(e => Model.PrimaryEmail, new { @class = "form-control", @Readonly = "Readonly" })
+                        </div>
+                    </div>
+
+                          
+                    <div class="form-group">                        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            @{ Html.RenderAction("List", "Addresses", new { id = Model.Id }); }
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            @{ Html.RenderAction("List", "ContactNumbers", new { id = Model.Id }); }
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            @{ Html.RenderAction("List", "EmailAddresses", new { id = Model.Id }); }
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+

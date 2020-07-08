@@ -1,0 +1,240 @@
+﻿@model ChitraLeka.ViewModel.Shared.TermCreation
+
+@{
+    ViewBag.Title = "Event Planner";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    div.outer {
+        border: solid 2px;
+        height: 200px;
+        position: relative;
+        display: inline-block;
+        width: 337px;
+        max-width: 350px;
+        margin-left: 20px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    div.hidden_box {
+        position: absolute;
+        display: none;
+        top: 0;
+        bottom: 0;
+        height: 200px;
+        width: 337px;
+        max-width: 350px;
+        background-color: whitesmoke;
+        left: 0;
+        right: 0;
+    }
+
+    div.inner_box {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        height: 200px;
+        width: 337px;
+        max-width: 350px;
+        background-color: #333333;
+        text-align: center;
+        left: 0;
+        right: 0;
+    }
+
+    /*div.outer:hover div.hidden_box {
+        display: block;
+    }*/
+</style>
+
+
+@*@using (Html.BeginForm(null,null,FormMethod.Get, new { ID = "frmEventDetails", @class = "form-horizontal", @autocomplete = "off" }))
+    {*@
+@Html.AntiForgeryToken()
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@Html.HiddenFor(g => g.GradeId)
+@Html.HiddenFor(g => g.LocationId)
+@Html.HiddenFor(g => g.StartDate)
+@Html.HiddenFor(g => g.EndDate)
+@Html.HiddenFor(g => g.WeeksCount)
+@Html.HiddenFor(g => g.DaysCount)
+@Html.HiddenFor(g => g.UnitPrice)
+@Html.HiddenFor(g => g.Fee)
+@Html.HiddenFor(g => g.Remarks)
+@Html.HiddenFor(g => g.Name)
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="content-box-large">
+
+            <div class="panel-heading">
+                <div class="panel-title">Event Planner</div>
+
+                <div class="panel-options">
+                    <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+                    <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+                </div>
+            </div>
+
+            <div class="panel-body">
+                <div class="form-horizontal">
+
+                    @for (int i = 0; i <= (Model.EndDate - Model.StartDate).Days; i++)
+                    {
+
+                        <div class="outer">
+                            <div class="inner_box" id="innerBox-@i" onclick="showHidden('@i')">
+                                <div style="margin-top: 94px;font-size: 20px;background-color: black;width: 100%;">
+                                    <span style="text-align:center;color:yellow;">@Model.StartDate.AddDays(i).ToShortDateString()</span>
+                                    <span style="text-align:center;color:cyan;">@Model.StartDate.AddDays(i).DayOfWeek</span>
+                                </div>
+                            </div>
+                            <div class="hidden_box" id="hiddenBox-@i">
+
+                                <div class="alert-danger" id="divError+@i" style="display:block;">
+                                    <span>Any error</span>
+                                </div>
+
+                                <div style="text-align:center;">
+                                    <select name="eventtypes" id="cmbEventType-@i">
+                                        <option id="0" value="NA">--Select--</option>
+                                        <option id="1" value="TC">Term Class</option>
+                                        <option id="2" value="NTC">Non Term Class</option>
+                                        <option id="3" value="OTH">Other Event</option>
+                                    </select>
+
+
+                                    <span>Timings</span>
+                                    <input type="time" id="inputEventTime-@i" />
+                                </div>
+
+
+                                <div style="text-align: center;margin-top: 10px;">
+                                    <div>
+                                        <input type="radio" name="group1-@i" value="paid" checked onclick="grp1OnBlur('@i');"> Paid
+                                        <input type="radio" name="group1-@i" value="free" onclick="grp1OnBlur(@i);"> Free
+
+                                        <input type="radio" name="group2-@i" value="mandatory" checked>Mandatory
+                                        <input type="radio" name="group2-@i" value="optional">Optional
+                                    </div>
+                                </div>
+
+                                <div style="text-align: center;margin-top: 10px;">
+                                    <input type="number" min="1" max="100" id="txtUnitPrice-@i" style="width:50px;text-align:right;" />
+                                </div>
+
+                                <div style="text-align: center;margin-top: 10px;">
+                                    <textarea required="required" style="width:60%;" id="txtComment-@i" placeholder="Description...."></textarea>
+                                </div>
+
+
+                                <p style="text-align: center;margin-top: 10px;">
+                                    <button type="submit" class="btn btn-info" style="font-size:10px;width:20%;" onclick="SubmitData('@i')">CONFIRM</button>
+                                    <button type="button" class="btn btn-danger" style="font-size:10px;width:20%;" onclick="CloseMe('@i')">CANCEL</button>
+                                </p>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+@*}*@
+
+<script>
+    function showHidden(i) {
+        $("#hiddenBox-" + i).css("display", "block");
+        $("#inner_box-" + i).css("display", "none");
+    }
+
+    function CloseMe(i) {
+        $("#hiddenBox-" + i).css("display", "none");
+        $("#inner_box-" + i).css("display", "block");
+    }
+
+    function grp1OnBlur(i) {
+        var gp1 = $('input[name=group1-' + i + ']:checked').val();
+        if (gp1 == "free") {
+            $('#txtUnitPrice-' + i).val('');
+        }
+    }
+
+    function SubmitData(i) {
+
+        var eventTypevalue = $('#cmbEventType-' + i).val();
+        var eventTimingvalue = $('#inputEventTime-' + i).val();
+        var gp1 = $('input[name=group1-' + i + ']:checked').val();
+        var gp2 = $('input[name=group2-' + i + ']:checked').val();
+        var unitPrice = $('#txtUnitPrice-' + i).val();
+        var isvalid = true;
+        if (gp1 == 'paid') {
+            if (isNaN(unitPrice) || unitPrice=='') {
+                isvalid = false;
+                $('#txtUnitPrice-' + i).css('border-color', 'red');
+            }
+        }
+        if (eventTypevalue == 'NA') {
+            isvalid = false;
+            $('#cmbEventType-' + i).css('border-color', 'red');
+        }
+        if (eventTimingvalue.length == 0) {
+            isvalid = false;
+            $('#inputEventTime-' + i).css('border-color', 'red');
+        }
+        if (isvalid) {
+            //int GradeId, int LocationId, DateTime StartDate, DateTime EndDate, int WeeksCount, int DaysCount, decimal UnitPrice, decimal Fee, string Remarks, string Name
+            var data =
+                {
+                    "GradeId": '@Model.GradeId',
+                    "LocationId": '@Model.LocationId',
+                    "StartDate": '@Model.StartDate',
+                    "EndDate": '@Model.EndDate',
+                    "WeeksCount": '@Model.WeeksCount',
+                    "DaysCount": '@Model.DaysCount',
+                    "UnitPrice": '@Model.UnitPrice',
+                    "Fee": '@Model.Fee',
+                    "Remarks": '@Model.Remarks',
+                    "Name": '@Model.Name',
+
+                };
+
+            $.ajax({
+                url: "/Lookup/SaveEvent",
+                type: "POST",
+                data: JSON.stringify(data),
+                dataType: "json",
+                contentType: "application/json",
+                success: function (data) {
+
+                    alert('sucess');
+                },
+                error: function () {
+                    // alert("Error");
+                }
+            });
+
+            CloseMe(i);
+        }
+    }
+
+
+
+</script>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+

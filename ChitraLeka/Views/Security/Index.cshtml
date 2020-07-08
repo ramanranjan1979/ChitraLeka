@@ -1,0 +1,282 @@
+﻿@using ChitraLeka.Helpers
+@model List<ChitraLeka.ViewModel.Security.Security>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+    ChitraLeka.Session.SessionManager sm = new ChitraLeka.Session.SessionManager();
+
+}
+
+<div class="content-box-large">
+    <div class="panel-heading">
+        <div class="panel-title">CDC User's Login</div>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].LoginId)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].UserName)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Password)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].IsActive)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].CreatedOn)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].IsLock)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].LockedOn)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].ModifiedOn)
+                    </th>
+
+                    <th>
+                        Admin Action
+                    </th>
+
+                    <th>
+                        <div class="pull-left">
+                            @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-plus'></span>", "New login", "CreateUserLogin", "Security", routeValues: null, htmlAttributes: new { @class = "btn btn-primary" })
+
+                        </div>
+                    </th>
+
+                </tr>
+
+                @foreach (var item in Model.OrderByDescending(x => x.CreatedOn))
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LoginId)
+                        </td>
+                        <td>
+                            <a onclick="$('#Person_Details_Popup-@item.Person.Id').modal(); return false;">@item.UserName</a>
+
+                            <div class="modal fade" id="Person_Details_Popup-@item.Person.Id" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <div class="modal-header">
+                                                    <img src="~/Images/DefaultAvatar.png" style="max-width: 107px;" />
+                                                    <h4>@item.Person.FirstName @item.Person.LastName </h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <ul style="list-style:none;">
+                                                        <li style="margin-top:10px;">
+                                                            First Name: @item.Person.FirstName
+                                                        </li>
+                                                        <li style="margin-top:10px;">
+                                                            Middle Name: @item.Person.MiddleName
+                                                        </li>
+                                                        <li style="margin-top:10px;">
+                                                            Last Name: @item.Person.LastName
+                                                        </li>
+                                                        <li style="margin-top:10px;">
+                                                            DOB: @item.Person.DOB
+                                                        </li>
+
+                                                        @if (item.Person.GenderTypeId == "1")
+                                                        {
+                                                            <li style="margin-top:10px;">
+                                                                Sex: Female
+                                                            </li>
+                                                        }
+                                                        else
+                                                        {
+                                                            <li style="margin-top:10px;">
+                                                                Sex: Male
+                                                            </li>
+                                                        }
+                                                    </ul>
+
+                                                    <ul style="list-style:none;">
+                                                        @foreach (var e in item.Person.PersonEmail.Where(p => p.IsPrimary))
+                                                        {
+                                                            <li style="margin-top:10px;">
+                                                                Primary Email: @e.Value
+                                                            </li>
+                                                        }
+                                                    </ul>
+
+                                                    <ul style="list-style:none;">
+                                                        @foreach (var e in item.Person.PersonAddress)
+                                                        {
+                                                            <li style="margin-top:10px;">
+                                                                @Html.Label(e.AddressType)
+                                                            </li>
+
+                                                            <li style="margin-top:10px;">
+                                                                @Html.Name(e.Line1)
+                                                            </li>
+
+                                                            <li style="margin-top:10px;">
+                                                                @Html.Name(e.Line2)
+                                                            </li>
+
+                                                            <li style="margin-top:10px;">
+                                                                @Html.Name(e.City)
+                                                            </li>
+
+                                                            <li style="margin-top:10px;">
+                                                                @Html.Name(e.State)
+                                                            </li>
+
+                                                            <li style="margin-top:10px;">
+                                                                @Html.Name(e.PostCode)
+                                                            </li>
+                                                        }
+                                                    </ul>
+
+                                                    <ul style="list-style:none;">
+                                                        @foreach (var e in item.Person.PersonContactNumber)
+                                                        {
+                                                            <li style="margin-top:10px;">
+                                                                @Html.Label(e.ContactNumberType)
+                                                            </li>
+
+                                                            <li style="margin-top:10px;">
+                                                                @Html.Name(e.Value)
+                                                            </li>
+
+                                                        }
+                                                    </ul>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Password)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsActive)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedOn)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsLock)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LockedOn)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ModifiedOn)
+                        </td>
+                        @{if (item.IsLock)
+                            {
+                                <td>
+                                    <input type="button" class="btn-success" value="Unlock" onclick="Action_Popup(@item.LoginId);" />
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <input type="button" class="btn-danger" value="Lock" onclick="Action_Popup(@item.LoginId);" />
+                                </td>
+                            }
+                        }
+                        <td>
+                            <input type="button" class="btn-warning" value="View Log" onclick="Log_Popup(@item.LoginId);" />
+                        </td>
+
+                    </tr>
+                            }
+            </table>
+
+            <div class="modal fade" id="actionpopup" role="dialog">
+                <div class="modal-dialog" style="border:solid 5px; border-color:red; border-radius:11px;">
+                    <div class="modal-content">
+                        <div class="modal-header" style="text-align:center;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4>To Change, Enter your password</h4>
+
+
+                        </div>
+                        <div class="modal-body" style="text-align:center;">
+                            <input type="text" id="password_Textbox" style="width: 200px; height: 20px;" />
+                            <input type="button" value="Submit" onclick="TakeAction();" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="logpopup" role="dialog">
+                <div class="modal-dialog" style="border:solid 5px; border-color:yellow; border-radius:11px;">
+                    <div class="modal-content">
+                        <div class="modal-header" style="text-align:center;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body" style="text-align:center;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var login_id_to_action = 0;
+    
+
+    function TakeAction() {
+        if ($("#password_Textbox").val() != '') {
+            window.location = "/Admin/ActionLogin/" + login_id_to_action;
+            $('#actionpopup').modal('hide');
+        }
+        else
+        {
+            $('#password_Textbox').focus();
+        }
+    }
+
+
+    function Action_Popup(id,code) {
+
+        login_id_to_action = id;   
+
+        $('#actionpopup').modal('show');
+
+        setTimeout("$('#password_Textbox').focus();", 1000);
+    }
+
+
+    function Log_Popup(id) {
+        login_id_to_action = id;
+        $('#logpopup').modal('show');
+    }
+
+
+</script>

@@ -1,0 +1,215 @@
+﻿@{
+    Layout = null;
+}
+
+@model IEnumerable<ChitraLeka.ViewModel.Shared.MailoutQueue>
+
+
+<div class="content-box-large">
+    <div class="panel-heading">
+        <div class="panel-title">History</div>
+    </div>
+    <div class="panel-body">
+
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+
+                    <th>
+                        @Html.Label("Name")
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+
+                    <th>
+                        @Html.Label("Message")
+                    </th>
+
+                    <th>
+                        @Html.Label("Queued On")
+                    </th>
+
+                    <th>
+                        @Html.Label("Sent On")
+                    </th>
+                </tr>
+
+                @foreach (var item in Model.OrderByDescending(o => o.CreatedOn))
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+
+                        <td>
+                            <a style="text-decoration:none;" onclick="$('#Person_Details_Popup-@item.Person.Id').modal(); return false;">@item.Person.FirstName @item.Person.LastName</a>
+
+                            <div class="modal fade" id="Person_Details_Popup-@item.Person.Id" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <div class="modal-header">
+                                                    <img src="~/Images/DefaultAvatar.png" style="max-width: 107px;" />
+                                                    <h4>@item.Person.FirstName @item.Person.LastName </h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <ul style="list-style:none;">
+                                                        <li style="margin-top:10px;">
+                                                            First Name: @item.Person.FirstName
+                                                        </li>
+                                                        <li style="margin-top:10px;">
+                                                            Middle Name: @item.Person.MiddleName
+                                                        </li>
+                                                        <li style="margin-top:10px;">
+                                                            Last Name: @item.Person.LastName
+                                                        </li>
+                                                        <li style="margin-top:10px;">
+                                                            DOB: @item.Person.DOB
+                                                        </li>
+
+                                                        @if (item.Person.GenderTypeId == "1")
+                                                        {
+                                                        <li style="margin-top:10px;">
+                                                            Sex: Female
+                                                        </li>
+                                                        }
+                                                        else
+                                                        {
+                                                        <li style="margin-top:10px;">
+                                                            Sex: Male
+                                                        </li>
+                                                        }
+                                                    </ul>
+
+                                                    <ul style="list-style:none;">
+                                                        @foreach (var e in item.Person.PersonEmail.Where(p => p.IsPrimary))
+                                                        {
+                                                        <li style="margin-top:10px;">
+                                                            Primary Email: @e.Value
+                                                        </li>
+                                                        }
+                                                    </ul>
+
+                                                    <ul style="list-style:none;">
+                                                        @foreach (var e in item.Person.PersonAddress)
+                                                        {
+                                                        <li style="margin-top:10px;">
+                                                            @Html.Label(e.AddressType)
+                                                        </li>
+
+                                                        <li style="margin-top:10px;">
+                                                            @Html.Name(e.Line1)
+                                                        </li>
+
+                                                        <li style="margin-top:10px;">
+                                                            @Html.Name(e.Line2)
+                                                        </li>
+
+                                                        <li style="margin-top:10px;">
+                                                            @Html.Name(e.City)
+                                                        </li>
+
+                                                        <li style="margin-top:10px;">
+                                                            @Html.Name(e.State)
+                                                        </li>
+
+                                                        <li style="margin-top:10px;">
+                                                            @Html.Name(e.PostCode)
+                                                        </li>
+                                                        }
+                                                    </ul>
+
+                                                    <ul style="list-style:none;">
+                                                        @foreach (var e in item.Person.PersonContactNumber)
+                                                        {
+                                                        <li style="margin-top:10px;">
+                                                            @Html.Label(e.ContactNumberType)
+                                                        </li>
+
+                                                        <li style="margin-top:10px;">
+                                                            @Html.Name(e.Value)
+                                                        </li>
+
+                                                        }
+                                                    </ul>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+
+
+                        <td>
+                            @{
+                                if (item.Status == 0)
+                                {
+                                  @Html.Label("Pending")
+                                }
+                                else
+                                {
+                                    @Html.Label("Sent")
+                                }
+
+                            }
+                        </td>
+
+                        <td>
+                            <a onclick="$('#mx_Details_Popup-@item.Id').modal(); return false;">@item.Type.Name</a>
+
+                            <div class="modal fade" id="mx_Details_Popup-@item.Id" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <div class="modal-header">
+                                                    <h4>TBC : Subject</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    @Html.Raw(item.HTML)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedOn)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UpdatedOn)
+                        </td>
+
+                    </tr>
+                                }
+            </table>
+
+        </div>
+
+
+    </div>
+</div>
+
+

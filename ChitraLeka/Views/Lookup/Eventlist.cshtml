@@ -1,0 +1,122 @@
+﻿@model ChitraLeka.ViewModel.Shared.TermListing
+
+@using ChitraLeka.Helpers
+@{
+    ViewBag.Title = "Invoice List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="content-box-large">
+    <div class="panel-heading">
+        <div class="panel-title">Planned Term</div>
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].Name)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].Grade.Name)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].StartDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].EndDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].WeeksCount)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].DaysCount)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].UnitPrice) <span>(£)</span>
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].Fee)<span>(£)</span>
+                    </th>
+
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].Remarks)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.TermList[0].Grade.StudentCount)
+                    </th>
+
+                    <th>
+                        <div class="pull-right">
+                            @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-plus'></span>", "new Term", "CreateTerm", "Lookup", routeValues: null, htmlAttributes: new { @class = "btn btn-primary" })
+                        </div>
+                    </th>
+                </tr>
+
+                @foreach (var item in Model.TermList.OrderBy(x => x.Grade.Name).ThenBy(y => y.StartDate))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Grade.Name)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartDate, "{0:d MMM yyyy}")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EndDate, "{0:d MMM yyyy}")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.WeeksCount)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DaysCount)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UnitPrice)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fee)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Remarks)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Grade.StudentCount)
+                        </td>
+
+                        <td>
+                            <div class="pull-right">
+                                @Html.NoEncodeActionLink("<span class='glyphicon glyphicon-pencil'></span>", "Edit", "EditTerm", "Lookup", routeValues: new { id = item.Id }, htmlAttributes: new { data_modal = "", @class = "btn btn-default" })
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

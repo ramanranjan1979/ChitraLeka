@@ -1,0 +1,72 @@
+﻿@model ChitraLeka.ViewModel.Shared.Support
+
+
+
+
+<div class="modal fade model_support" id="model_support" tabindex="-1" role="dialog" aria-labelledby="model_support">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body modal-bg">
+                <img src="~/Images/btn-close.gif" class="close" onclick="$('#model_support').modal('hide');" style="z-index:8;" />
+                <div id="support_body">
+                    <div class="col-lg-12" style="z-index:8;">
+                        <h3>HOW CAN WE HELP?</h3>
+                        <p>Please fill out the simple form below for any queries or issues you may experience, a member from our support team will assist you as soon as possible. </p>
+                    </div>
+                    <div class="col-lg-10" style="margin-left: auto;  margin-right: auto; float: none; z-index:8;">
+                        @using (Ajax.BeginForm("UploadSupportTicket", "Shared", new AjaxOptions() { HttpMethod = "Post", OnSuccess = "ThankYouSupport(data);" }, new { @Id = "SupportPopupForm", @class = "form" }))
+                        {
+
+
+                            if (Model.isMemnber == false)
+                            {
+                                @Html.TextBoxFor(name => Model.Name, new { @Class = "col-lg-12 form-control", maxlength = 20, @placeholder = "Name", required = "required", @style = "margin-bottom: 20px;" })
+                                @Html.TextBoxFor(name => Model.EmailAddress, new { @Class = "col-lg-12 form-control", maxlength = 50, @type = "email", @placeholder = "Enter Your Email Address", required = "required", @data_val = "true", @data_val_required = "ENTER YOUR EMAIL", @style = "margin-bottom: 20px;" })
+                            }
+                            else
+                            {
+                                @Html.HiddenFor(r => r.EmailAddress)
+                                @Html.TextBoxFor(name => Model.Name, new { @Class = "col-lg-12 form-control", @placeholder = "Name", @readonly = "readonly", @style = "margin-bottom: 20px;" })
+                            }
+                            @Html.TextAreaFor(message => Model.Message, new { @class = "col-lg-12 form-control", @placeholder = "Message up to 250 Characters", @style = "margin-bottom: 20px;text-align:left;" })
+
+                            <span class="submit" style="cursor:pointer;" onclick="$('#SupportPopupForm').submit(); return false;">SUBMIT</span>
+                        }
+                    </div>
+                </div>
+                <div>
+                    <div id="SupportThankYou" class="col-lg-12" style="z-index:8;display:none;">
+                        <h3>Thanks!</h3>
+                        <p>
+                            You are very important to us, all information received will always remain confidential. We will contact you as soon as we review your message.
+                        </p>
+                    </div>
+
+                    <div id="SupportThankYou1" class="col-lg-12" style="z-index:8;display:none;">
+                        <h3>Sorry!</h3>
+                        <p>
+                            Email address cannot be found into system.Please enter the registered email address.
+                        </p>
+                    </div>
+
+                    <div id="SupportThankYou2" class="col-lg-12" style="z-index:8;display:none;">
+                        <h3>Thanks!</h3>
+                        <p>
+                            We have already received your query and you are very important to us, all information received will always remain confidential. We will contact you as soon as we review your message.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $("#Message").on('keyup keypress blur change', function (e) { NoSpecialCharacters(this) });
+
+    function NoSpecialCharacters(f) {
+        !(/^ [A-z&#209;&#241;0-9\n\r,\.\-#~\[\]\{\}\?\(\)\+\=£$€%!\:\']*$/i).test(f.value) ? f.value = f.value.replace(/[^ A-z&#209;&#241;0-9\n\r,\.\-#~\[\]\{\}\?\(\)\+\=£$€%!\:\']/ig, '') : null;
+    }
+
+</script>

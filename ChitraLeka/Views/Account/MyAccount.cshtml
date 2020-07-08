@@ -1,0 +1,189 @@
+﻿@model ChitraLeka.ViewModel.Contact.Person
+
+@{
+    ViewBag.Title = "MyAccount";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="page-content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+
+                <div class="content-box-large">
+                    <div class="panel-heading">
+                        <div class="panel-title"><img src="~/Images/DefaultAvatar.png" style="max-width: 107px;" /></div>
+
+
+                    </div>
+                    <div class="panel-body">
+                        <div id="rootwizard">
+                            <div class="navbar">
+                                <div class="navbar-inner">
+                                    <div class="container">
+                                        <ul class="nav nav-pills">
+                                            <li class="active"><a href="#tab1" data-toggle="tab">Personal</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">Email Address</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">Address</a></li>
+                                            <li><a href="#tab4" data-toggle="tab">Contact Number</a></li>
+                                            <li><a href="#tab5" data-toggle="tab">Change Password</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab1">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">First Name</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Middle Name</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Last Name</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">DOB</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => model.DOB, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Sex</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => model.GenderTypeId, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane" id="tab2">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            @foreach (var item in Model.PersonEmail.Where(x => x.IsPrimary))
+                                            {
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Primary Email</label>
+                                                <div class="col-sm-10 control-label">
+                                                    @Html.EditorFor(model => item.Value, new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                            }
+
+                                            @foreach (var item in Model.PersonEmail.Where(x => x.IsPrimary == false))
+                                            {
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">Other Email</label>
+                                                <div class="col-sm-10 control-label">
+                                                    @Html.EditorFor(model => item.Value, new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                            }
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane" id="tab3">
+                                    <form class="form-horizontal" role="form">
+                                        @foreach (var e in Model.PersonAddress)
+                                        {
+                                        <div class="form-group">
+                                            <div class="col-sm-2 control-label">
+                                                @Html.DisplayFor(model => e.AddressType, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Line 1</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => e.Line1, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Line 2</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => e.Line2, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">City</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => e.City, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">State</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => e.State, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Postcode</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => e.PostCode, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Landmark</label>
+                                            <div class="col-sm-10">
+                                                @Html.EditorFor(model => e.Landmark, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+                                        }
+                                    </form>
+                                </div>
+
+                                <div class="tab-pane" id="tab4">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            @foreach (var e in Model.PersonContactNumber)
+                                            {
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-2 control-label">@e.ContactNumberType</label>
+                                                <div class="col-sm-10">
+                                                    @Html.EditorFor(model => e.Value, new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                            }
+                                        </div>
+                                    </form>
+                                </div>
+
+
+                                <div class="tab-pane" id="tab5">
+                                    @Html.Partial("_changePassword", new ChitraLeka.ViewModel.Security.ChangePassword() { loginId = new ChitraLeka.Session.SessionManager().UserSession.LoginId})
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

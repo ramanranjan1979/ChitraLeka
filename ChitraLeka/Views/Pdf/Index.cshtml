@@ -1,0 +1,203 @@
+﻿@model ChitraLeka.ViewModel.Ledger.Invoice
+
+@{
+    ViewBag.Title = "PDF";
+    Layout = "~/Views/Shared/_PdfLayout.cshtml";
+    var imagePath = Server.MapPath("~/Images");
+}
+
+
+
+<table style="border:dashed 1px;width:100%;padding:5px;">
+    <tr>
+        <td>Name:</td>
+        <td style="text-align:right;">
+            <span>@Model.Person.FirstName  @Model.Person.LastName</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>Date Of Birth:</td>
+        <td style="text-align:right;"><span>@Model.Person.DOB </span></td>
+    </tr>
+
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>Email Address: </td>
+        <td style="text-align:right;">
+            @Model.Person.PrimaryEmail
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>Grade: </td>
+        <td style="text-align:right;">
+            @Model.Student.StudentGrades.StudentGrades.Where(x=>x.IsCurrent).SingleOrDefault().Grade
+        </td>
+    </tr>
+</table>
+
+<table style="border:solid 0px;width:100%;">
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+
+</table>
+
+<table style="border:solid 1px;width:100%;">
+    <tr>
+        <td>Name:</td>
+        <td style="text-align:right;">
+            <span>@Model.Person.FirstName  @Model.Person.LastName</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Date Of Birth:</td>
+        <td style="text-align:right;"><span>@Model.Person.DOB </span></td>
+    </tr>
+    <tr>
+        <td>Email Address: </td>
+        <td style="text-align:right;">
+            @Model.Person.PrimaryEmail
+        </td>
+    </tr>
+
+    <tr>
+        <td>Grade: </td>
+        <td style="text-align:right;">
+            @Model.Student.StudentGrades.StudentGrades.Where(x => x.IsCurrent).SingleOrDefault().Grade
+        </td>
+    </tr>
+</table>
+
+
+
+<table style="border:solid 0px;width:100%;">
+    <tr>
+        <td>&nbsp;</td>        
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+   
+</table>
+
+
+
+<table style="border:solid 1px;width:100%;">
+    <tr>
+        <td>Invoice Number:</td>
+        <td style="text-align:right;">
+            <span>@Model.InvoiceNumber</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Invoice Date:</td>
+        <td style="text-align:right;"><span>@Model.InvoiceDate </span></td>
+    </tr>
+    <tr>
+        <td>Due Date: </td>
+        <td style="text-align:right;">
+            @Model.DueDate
+        </td>
+    </tr>
+    <tr>
+        <td>Invoice Amount</td>
+        <td style="text-align:right;"><span>£ @Model.InvoiceAmount.ToString("0.#0")</span></td>
+    </tr>
+
+</table>
+
+<table style="border:solid 0px;width:100%;">
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+
+
+</table>
+
+
+<table style="border:solid 1px;width:100%;">
+    <tr>
+        <td style="text-align:center;">PAYMENT TERMS</td>        
+    </tr>   
+    <tr>        
+        <td style="text-align:center;">
+            <span>
+                Cheques to: Chitraleka Dance Company Online: <strong>Sort Code: 20-85-13 Account No: 10749249</strong> (please include student's name in reference box)
+            </span>
+        </td>
+    </tr>   
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
