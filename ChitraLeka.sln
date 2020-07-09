@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLekaDAL", "..\ChitraLekaDAL\ChitraLekaDAL\ChitraLekaDAL.csproj", "{4197070A-3301-4451-9826-3F4B429B331F}"
 EndProject
@@ -9,13 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitralekaDB", "..\Chitrale
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLekaService", "..\ChitraLekaService\ChitraLekaService\ChitraLekaService.csproj", "{4D38EB09-B50E-4526-B04C-FF1FF2C9F251}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLeka.Common", "..\ChitraLeka.Common\ChitraLeka.Common.csproj", "{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLeka.Models", "..\ChitraLeka.Models\ChitraLeka.Models.csproj", "{D09375CB-171A-4F06-AFFC-64731EFF1168}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLeka", "ChitraLeka\ChitraLeka.csproj", "{2532FBEE-E6A2-4F7A-8C67-7D5B1EB678EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAjax", "..\TestAjaxified\TestAjax\TestAjax.csproj", "{3BF68DD7-DFC3-45ED-9177-2563A323079F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLeka.Common", "..\ChitraLeka.Common\ChitraLeka.Common.csproj", "{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,6 @@ Global
 		{4D38EB09-B50E-4526-B04C-FF1FF2C9F251}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D38EB09-B50E-4526-B04C-FF1FF2C9F251}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D38EB09-B50E-4526-B04C-FF1FF2C9F251}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,35 +47,15 @@ Global
 		{3BF68DD7-DFC3-45ED-9177-2563A323079F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BF68DD7-DFC3-45ED-9177-2563A323079F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BF68DD7-DFC3-45ED-9177-2563A323079F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://modiinfolimited.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = ..\\ChitraLekaDAL\\ChitraLekaDAL\\ChitraLekaDAL.csproj
-		SccProjectName1 = ../ChitraLekaDAL/ChitraLekaDAL
-		SccLocalPath1 = ..\\ChitraLekaDAL\\ChitraLekaDAL
-		SccProjectUniqueName2 = ..\\ChitralekaDB\\ChitralekaDB\\ChitralekaDB.csproj
-		SccProjectName2 = ../ChitralekaDB/ChitralekaDB
-		SccLocalPath2 = ..\\ChitralekaDB\\ChitralekaDB
-		SccProjectUniqueName3 = ..\\ChitraLekaService\\ChitraLekaService\\ChitraLekaService.csproj
-		SccProjectName3 = ../ChitraLekaService/ChitraLekaService
-		SccLocalPath3 = ..\\ChitraLekaService\\ChitraLekaService
-		SccProjectUniqueName4 = ..\\ChitraLeka.Common\\ChitraLeka.Common.csproj
-		SccProjectName4 = ../ChitraLeka.Common
-		SccLocalPath4 = ..\\ChitraLeka.Common
-		SccProjectUniqueName5 = ..\\ChitraLeka.Models\\ChitraLeka.Models.csproj
-		SccProjectName5 = ../ChitraLeka.Models
-		SccLocalPath5 = ..\\ChitraLeka.Models
-		SccProjectUniqueName6 = ChitraLeka\\ChitraLeka.csproj
-		SccProjectName6 = ChitraLeka
-		SccLocalPath6 = ChitraLeka
-		SccProjectUniqueName7 = ..\\TestAjaxified\\TestAjax\\TestAjax.csproj
-		SccProjectName7 = ../TestAjaxified/TestAjax
-		SccLocalPath7 = ..\\TestAjaxified\\TestAjax
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1DDCF4EF-B8BB-47A6-8ACF-45F7918917C6}
 	EndGlobalSection
 EndGlobal

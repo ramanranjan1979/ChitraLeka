@@ -25,6 +25,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1449,10 +1450,6 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ChitraLeka.Common\ChitraLeka.Common.csproj">
-      <Project>{1f538caa-77a0-4ac0-a9a4-c5dbb4bab4f3}</Project>
-      <Name>ChitraLeka.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\ChitraLeka.Models\ChitraLeka.Models.csproj">
       <Project>{d09375cb-171a-4f06-affc-64731eff1168}</Project>
       <Name>ChitraLeka.Models</Name>
