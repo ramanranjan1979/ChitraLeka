@@ -3,19 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLekaDAL", "..\ChitraLekaDAL\ChitraLekaDAL\ChitraLekaDAL.csproj", "{4197070A-3301-4451-9826-3F4B429B331F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitralekaDB", "..\ChitralekaDB\ChitralekaDB\ChitralekaDB.csproj", "{C4E555B5-1DC6-4809-8253-01C157214733}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLekaService", "..\ChitraLekaService\ChitraLekaService\ChitraLekaService.csproj", "{4D38EB09-B50E-4526-B04C-FF1FF2C9F251}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLeka.Models", "..\ChitraLeka.Models\ChitraLeka.Models.csproj", "{D09375CB-171A-4F06-AFFC-64731EFF1168}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLeka.Common", "..\ChitraLeka.Common\ChitraLeka.Common.csproj", "{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLeka", "ChitraLeka\ChitraLeka.csproj", "{2532FBEE-E6A2-4F7A-8C67-7D5B1EB678EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAjax", "..\TestAjaxified\TestAjax\TestAjax.csproj", "{3BF68DD7-DFC3-45ED-9177-2563A323079F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLeka.Models", "..\ChitraLeka.Models\ChitraLeka.Models.csproj", "{D09375CB-171A-4F06-AFFC-64731EFF1168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLeka.Common", "..\ChitraLeka.Common\ChitraLeka.Common.csproj", "{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitraLekaDAL", "..\ChitraLekaDAL\ChitraLekaDAL\ChitraLekaDAL.csproj", "{4197070A-3301-4451-9826-3F4B429B331F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChitralekaDB", "..\ChitralekaDB\ChitralekaDB\ChitralekaDB.csproj", "{C4E555B5-1DC6-4809-8253-01C157214733}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +19,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2532FBEE-E6A2-4F7A-8C67-7D5B1EB678EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2532FBEE-E6A2-4F7A-8C67-7D5B1EB678EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2532FBEE-E6A2-4F7A-8C67-7D5B1EB678EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2532FBEE-E6A2-4F7A-8C67-7D5B1EB678EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4197070A-3301-4451-9826-3F4B429B331F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4197070A-3301-4451-9826-3F4B429B331F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4197070A-3301-4451-9826-3F4B429B331F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,31 +39,11 @@ Global
 		{C4E555B5-1DC6-4809-8253-01C157214733}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4E555B5-1DC6-4809-8253-01C157214733}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4E555B5-1DC6-4809-8253-01C157214733}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D38EB09-B50E-4526-B04C-FF1FF2C9F251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D38EB09-B50E-4526-B04C-FF1FF2C9F251}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D38EB09-B50E-4526-B04C-FF1FF2C9F251}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D38EB09-B50E-4526-B04C-FF1FF2C9F251}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D09375CB-171A-4F06-AFFC-64731EFF1168}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2532FBEE-E6A2-4F7A-8C67-7D5B1EB678EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2532FBEE-E6A2-4F7A-8C67-7D5B1EB678EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2532FBEE-E6A2-4F7A-8C67-7D5B1EB678EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2532FBEE-E6A2-4F7A-8C67-7D5B1EB678EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3BF68DD7-DFC3-45ED-9177-2563A323079F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BF68DD7-DFC3-45ED-9177-2563A323079F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BF68DD7-DFC3-45ED-9177-2563A323079F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BF68DD7-DFC3-45ED-9177-2563A323079F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F538CAA-77A0-4AC0-A9A4-C5DBB4BAB4F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1DDCF4EF-B8BB-47A6-8ACF-45F7918917C6}
+		SolutionGuid = {8D2CF79F-2F97-4EC1-9222-2BAA951FD496}
 	EndGlobalSection
 EndGlobal
