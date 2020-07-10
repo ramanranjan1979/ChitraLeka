@@ -169,6 +169,191 @@
     </Compile>
     <Compile Include="Helpers\MyHelpers.cs" />
     <Compile Include="Helpers\SessionManager.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\Helper.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\MvcRazorToPdf.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\MvcRazorToPdfExtensions.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\PdfActionResult.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\PDFBuilder.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Common\Properties\AssemblyInfo.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\Account\ForgotPasswordViewModel.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\Account\LoginViewModel.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\Ledger\LedgerViewModel.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\Person\PersonViewModel.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\Properties\AssemblyInfo.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\Registration\RegistrationViewModel.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\Security\SecurityViewModel.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\Shared\SharedViewModel.cs" />
+    <Compile Include="Other Projects\ChitraLeka.Models\Student\StudentViewModel.cs" />
+    <Compile Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\Dal.cs" />
+    <Compile Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\Properties\AssemblyInfo.cs" />
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\AcademyCenter.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Address.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\AddressType.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Calendar.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\CalendarDetail.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity.Context.cs" />
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cLekaDbEntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity.cs" />
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity.Designer.cs">
+      <DependentUpon>cLekaDbEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cLekaDbEntity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Contact.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\ContactNumberType.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Country.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\EmailAddress.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Enquiry.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\EnquiryType.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\EventType.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Grade.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Invoice.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\InvoiceType.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Key.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Log.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Login.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\LogType.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\MailoutParameter.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\MailoutQueue.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\MailoutQueueParameterValue.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\MailoutTracker.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\MailoutType.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\MailoutTypeParameter.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Payment.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Person.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\PersonEmail.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\PersonRole.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\PersonType.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Properties\AssemblyInfo.cs" />
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Registration.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Role.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Salutation.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Sample.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\SecurityCode.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\SecurityType.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\Student.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitralekaDB\ChitralekaDB\StudentGrade.cs">
+      <DependentUpon>cLekaDbEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Other Projects\ChitraLekaService\ChitraLekaService\EmailService.cs" />
+    <Compile Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Other Projects\ChitraLekaService\ChitraLekaService\Program.cs" />
+    <Compile Include="Other Projects\ChitraLekaService\ChitraLekaService\Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1246,6 +1431,305 @@
     <Content Include="Mailout\tmpAdmission.html" />
     <Content Include="Mailout\tmpCredential.html" />
     <Content Include="Mailout\tmpSupport.html" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\de\System.Web.Helpers.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\de\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\de\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\de\System.Web.WebPages.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\EntityFramework.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\EntityFramework.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\itextsharp.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\itextsharp.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\itextsharp.xmlworker.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\MMWA.Common.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\MMWA.Common.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\MMWA.DB.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\MMWA.DB.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\PdfSharp.Charting.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\PdfSharp.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.Helpers.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.Helpers.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.Mvc.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.Mvc.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.Razor.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.Razor.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.WebPages.Deployment.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.WebPages.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.WebPages.Razor.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.WebPages.Razor.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\System.Web.WebPages.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\de\PdfSharp.Charting.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\de\PdfSharp.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\de\System.Web.Helpers.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\de\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\de\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\de\System.Web.WebPages.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\EntityFramework.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\EntityFramework.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\itextsharp.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\itextsharp.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\itextsharp.xmlworker.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\MMWA.Common.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\MMWA.Common.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\MMWA.DB.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\MMWA.DB.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\PdfSharp.Charting.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\PdfSharp.Charting.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\PdfSharp.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\PdfSharp.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.Helpers.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.Helpers.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.Mvc.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.Mvc.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.Razor.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.Razor.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.WebPages.Deployment.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.WebPages.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.WebPages.Razor.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.WebPages.Razor.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Release\System.Web.WebPages.xml" />
+    <Content Include="Other Projects\ChitraLeka.Common\ChitraLeka.Common.csproj.user" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Debug\ChitraLeka.Common.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Debug\MMWA.Common.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Debug\MMWA.Common.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Debug\MMWA.Common.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Release\ChitraLeka.Common.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Release\MMWA.Common.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Release\MMWA.Common.dll" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Release\MMWA.Common.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\EntityFramework.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\EntityFramework.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\MMWA.DB.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\MMWA.DB.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\MMWA.Models.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\MMWA.Models.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\System.Web.Mvc.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\System.Web.Mvc.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\de\PdfSharp.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\de\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\de\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\de\System.Web.WebPages.resources.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\EntityFramework.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\EntityFramework.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\itextsharp.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\itextsharp.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\itextsharp.xmlworker.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\Microsoft.Web.Infrastructure.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\MMWA.Common.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\MMWA.Common.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\MMWA.DB.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\MMWA.DB.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\MMWA.Models.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\MMWA.Models.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\PdfSharp.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\PdfSharp.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\System.Web.Mvc.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\System.Web.Mvc.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\System.Web.Razor.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\System.Web.Razor.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\System.Web.WebPages.Deployment.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\System.Web.WebPages.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\System.Web.WebPages.Razor.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\System.Web.WebPages.Razor.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\System.Web.WebPages.xml" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Debug\ChitraLeka.Models.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Debug\MMWA.Models.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Debug\MMWA.Models.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Debug\MMWA.Models.pdb" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Release\ChitraLeka.Models.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Release\MMWA.Models.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Release\MMWA.Models.dll" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Release\MMWA.Models.pdb" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\ChitraLekaDAL.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\ChitraLekaDAL.pdb" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\de\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\de\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\de\System.Web.WebPages.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\EntityFramework.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\EntityFramework.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\itextsharp.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\itextsharp.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\itextsharp.xmlworker.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\MMWA.Common.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\MMWA.Common.pdb" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\MMWA.Models.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\MMWA.Models.pdb" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\PdfSharp.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\System.Web.Mvc.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\System.Web.Mvc.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\System.Web.Razor.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\System.Web.Razor.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\System.Web.WebPages.Deployment.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\System.Web.WebPages.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\System.Web.WebPages.Razor.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\System.Web.WebPages.Razor.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\System.Web.WebPages.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\ChitraLekaDAL.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\ChitraLekaDAL.pdb" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\de\PdfSharp.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\de\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\de\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\de\System.Web.WebPages.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\EntityFramework.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\EntityFramework.SqlServer.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\EntityFramework.SqlServer.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\EntityFramework.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\itextsharp.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\itextsharp.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\itextsharp.xmlworker.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\MMWA.Common.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\MMWA.Common.pdb" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\MMWA.Models.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\MMWA.Models.pdb" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\PdfSharp.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\PdfSharp.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\System.Web.Mvc.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\System.Web.Mvc.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\System.Web.Razor.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\System.Web.Razor.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\System.Web.WebPages.Deployment.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\System.Web.WebPages.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\System.Web.WebPages.Razor.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\System.Web.WebPages.Razor.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\System.Web.WebPages.xml" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\ChitraLekaDAL.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\ChitraLekaDAL.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\ChitraLekaDAL.pdb" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Release\ChitraLekaDAL.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Release\ChitraLekaDAL.dll" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Release\ChitraLekaDAL.pdb" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Debug\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Debug\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Debug\EntityFramework.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Debug\EntityFramework.xml" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Release\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Release\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Release\EntityFramework.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Release\EntityFramework.SqlServer.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Release\EntityFramework.SqlServer.xml" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Release\EntityFramework.xml" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\ChitralekaDB.csproj.user" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>cLekaDbEntity.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity.edmx.sql" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>cLekaDbEntity1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\DB Script\Constraint.sql" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\DB Script\Debug.sql" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\DB Script\Lookup.sql" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\ChitralekaDB.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\TempPE\cLekaDbEntity.cs.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\TempPE\cLekaDbEntity.Designer.cs.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\ChitralekaDB.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\TempPE\cLekaDbEntity.cs.dll" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\TempPE\cLekaDbEntity.Designer.cs.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitraLekaDAL.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitraLekaDAL.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitraLekaService.exe" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitraLekaService.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitraLekaService.vshost.exe" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\de\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\de\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\de\System.Web.WebPages.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\EntityFramework.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\EntityFramework.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\itextsharp.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\itextsharp.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\itextsharp.xmlworker.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\MMWA.Common.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\MMWA.Common.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\MMWA.Models.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\MMWA.Models.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\PdfSharp.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\System.Web.Mvc.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\System.Web.Mvc.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\System.Web.Razor.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\System.Web.Razor.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\System.Web.WebPages.Deployment.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\System.Web.WebPages.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\System.Web.WebPages.Razor.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\System.Web.WebPages.Razor.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\System.Web.WebPages.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\ChitraLekaDAL.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\ChitraLekaDAL.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\ChitralekaDB.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\ChitralekaDB.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\ChitraLekaService.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\ChitraLekaService.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\de\PdfSharp.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\de\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\de\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\de\System.Web.WebPages.resources.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\EntityFramework.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\EntityFramework.SqlServer.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\EntityFramework.SqlServer.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\EntityFramework.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\itextsharp.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\itextsharp.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\itextsharp.xmlworker.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\MMWA.Common.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\MMWA.Common.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\MMWA.Models.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\MMWA.Models.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\PdfSharp.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\PdfSharp.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\System.Web.Mvc.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\System.Web.Mvc.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\System.Web.Razor.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\System.Web.Razor.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\System.Web.WebPages.Deployment.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\System.Web.WebPages.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\System.Web.WebPages.Razor.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\System.Web.WebPages.Razor.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\System.Web.WebPages.xml" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\ChitraLekaService.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\ChitraLekaService.exe" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\ChitraLekaService.pdb" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Release\ChitraLekaService.csproj.FileListAbsolute.txt" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Release\ChitraLekaService.dll" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Release\ChitraLekaService.pdb" />
     <Content Include="robots.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1342,6 +1826,86 @@
     <Content Include="Bootstrap-Admin-Theme-3-master\vendors\tinymce\js\tinymce\skins\lightgray\fonts\icomoon.ttf" />
     <Content Include="Bootstrap-Admin-Theme-3-master\vendors\tinymce\js\tinymce\skins\lightgray\fonts\icomoon.woff" />
     <Content Include="Bootstrap-Admin-Theme-3-master\vendors\tinymce\js\tinymce\skins\lightgray\fonts\readme.md" />
+    <Content Include="Other Projects\ChitraLeka.Common\bin\Debug\ChitralekaDB.dll.config" />
+    <Content Include="Other Projects\ChitraLeka.Common\ChitraLeka.Common.csproj" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Debug\ChitraLeka.Common.csproj.CopyComplete" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Debug\ChitraLeka.Common.csproj.CoreCompileInputs.cache" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Debug\ChitraLeka.Common.csprojAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Debug\MMWA.Common.csprojResolveAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Release\ChitraLeka.Common.csprojResolveAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Other Projects\ChitraLeka.Common\obj\Release\MMWA.Common.csprojResolveAssemblyReference.cache" />
+    <None Include="Other Projects\ChitraLeka.Common\packages.config" />
+    <Content Include="Other Projects\ChitraLeka.Models\app.config" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\ChitralekaDB.dll.config" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Debug\MMWA.Models.dll.config" />
+    <Content Include="Other Projects\ChitraLeka.Models\bin\Release\MMWA.Models.dll.config" />
+    <Content Include="Other Projects\ChitraLeka.Models\ChitraLeka.Models.csproj" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Debug\ChitraLeka.Models.csproj.CopyComplete" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Debug\ChitraLeka.Models.csproj.CoreCompileInputs.cache" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Debug\ChitraLeka.Models.csprojAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Debug\MMWA.Models.csprojResolveAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Release\ChitraLeka.Models.csprojResolveAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Other Projects\ChitraLeka.Models\obj\Release\MMWA.Models.csprojResolveAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\App.config" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\ChitraLekaDAL.dll.config" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\ChitralekaDB.dll.config" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Debug\MMWA.Models.dll.config" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\bin\Release\ChitraLekaDAL.dll.config" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\ChitraLekaDAL.csproj" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\ChitraLekaDAL.csproj.CopyComplete" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\ChitraLekaDAL.csproj.CoreCompileInputs.cache" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\ChitraLekaDAL.csprojAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Release\ChitraLekaDAL.csprojResolveAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\packages.config" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\App.Config" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Debug\ChitralekaDB.dll.config" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\bin\Release\ChitralekaDB.dll.config" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\ChitralekaDB.csproj" />
+    <EntityDeploy Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>cLekaDbEntity1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\cLekaDbEntity.edmx.diagram">
+      <DependentUpon>cLekaDbEntity.edmx</DependentUpon>
+    </Content>
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\ChitralekaDB.csproj.CopyComplete" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\ChitralekaDB.csproj.CoreCompileInputs.cache" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\ChitralekaDB.csprojAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\edmxResourcesToEmbed\cLekaDbEntity.csdl" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\edmxResourcesToEmbed\cLekaDbEntity.msl" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Debug\edmxResourcesToEmbed\cLekaDbEntity.ssdl" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\ChitralekaDB.csprojResolveAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\edmxResourcesToEmbed\cLekaDbEntity.csdl" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\edmxResourcesToEmbed\cLekaDbEntity.msl" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\obj\Release\edmxResourcesToEmbed\cLekaDbEntity.ssdl" />
+    <Content Include="Other Projects\ChitralekaDB\ChitralekaDB\Sample.xlsx" />
+    <Content Include="Other Projects\ChitralekaDB\SSIS IMPORTS\Import.dtsx" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\App.config" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitraLekaDAL.dll.config" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitralekaDB.dll.config" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitraLekaService.exe.config" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitraLekaService.vshost.exe.config" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\ChitraLekaService.vshost.exe.manifest" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Debug\MMWA.Models.dll.config" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\bin\Release\ChitraLekaService.dll.config" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\ChitraLekaService.csproj" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\ChitraLekaService.csproj.CopyComplete" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\ChitraLekaService.csproj.CoreCompileInputs.cache" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\ChitraLekaService.csprojAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Release\ChitraLekaService.csprojResolveAssemblyReference.cache" />
+    <Content Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Other Projects\ChitraLekaService\ChitraLekaService\packages.config" />
     <None Include="Properties\PublishProfiles\chitraLeka.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\cdc.js" />
@@ -1445,6 +2009,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Other Projects\ChitraLeka.Common\obj\Debug\TempPE\" />
+    <Folder Include="Other Projects\ChitraLeka.Common\obj\Release\TempPE\" />
+    <Folder Include="Other Projects\ChitraLeka.Models\Admin\" />
+    <Folder Include="Other Projects\ChitraLeka.Models\bin\Debug\de\" />
+    <Folder Include="Other Projects\ChitraLeka.Models\obj\Debug\TempPE\" />
+    <Folder Include="Other Projects\ChitraLeka.Models\obj\Release\TempPE\" />
+    <Folder Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Debug\TempPE\" />
+    <Folder Include="Other Projects\ChitraLekaDAL\ChitraLekaDAL\obj\Release\TempPE\" />
+    <Folder Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Debug\TempPE\" />
+    <Folder Include="Other Projects\ChitraLekaService\ChitraLekaService\obj\Release\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -1474,6 +2048,9 @@
       <Project>{4d38eb09-b50e-4526-b04c-ff1ff2c9f251}</Project>
       <Name>ChitraLekaService</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

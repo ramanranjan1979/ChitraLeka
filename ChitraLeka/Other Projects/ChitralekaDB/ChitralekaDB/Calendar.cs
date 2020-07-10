@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChitralekaDB
+namespace ChitraLeka.Other_Projects.ChitralekaDB.ChitralekaDB
 {
     using System;
     using System.Collections.Generic;
